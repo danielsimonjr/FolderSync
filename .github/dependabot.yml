@@ -1,0 +1,14 @@
+version: 2
+updates:
+  # No pip manifest in this repo (no requirements.txt / pyproject.toml), so only
+  # the GitHub Actions ecosystem is tracked here.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]
+    commit-message:
+      prefix: ci
+    labels: [dependencies, github-actions]
